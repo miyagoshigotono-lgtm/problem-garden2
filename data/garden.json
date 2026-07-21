@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "projects": [
+    {
+      "id": "keyzai",
+      "name": "KeyZai（カスタムマクロキーパッド）",
+      "status": "seed",
+      "growth_stage": 0,
+      "plant_type": "tree",
+      "current_note": "仕様書作成済みで停滞",
+      "problems": [
+        { "id": "p1", "text": "実装着手の優先度が上がらない", "resolved": false }
+      ],
+      "lesson": null,
+      "created_at": "2026-07-16",
+      "last_updated": "2026-07-16",
+      "harvested_at": null,
+      "composted_at": null
+    },
+    {
+      "id": "kanamono-pwa",
+      "name": "金物拾いPWA",
+      "status": "harvested",
+      "growth_stage": 5,
+      "plant_type": "herb",
+      "current_note": "公開済み・運用中",
+      "problems": [],
+      "lesson": null,
+      "created_at": "2026-01-10",
+      "last_updated": "2026-03-02",
+      "harvested_at": "2026-03-02",
+      "composted_at": null
+    },
+    {
+      "id": "esp32-sleep-off",
+      "name": "ESP32就寝自動オフ装置",
+      "status": "harvested",
+      "growth_stage": 5,
+      "plant_type": "tree",
+      "current_note": "実機稼働中",
+      "problems": [],
+      "lesson": null,
+      "created_at": "2025-11-05",
+      "last_updated": "2026-02-18",
+      "harvested_at": "2026-02-18",
+      "composted_at": null
+    }
+  ]
+}

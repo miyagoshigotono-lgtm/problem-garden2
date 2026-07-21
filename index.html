@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2f3b26">
+  <title>プロブレムガーデン</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- 庭本体 -->
+  <canvas id="garden"></canvas>
+
+  <!-- 操作ボタン（最小・大きめ） -->
+  <div class="toolbar">
+    <button id="btn-add" class="tool" title="種を植える">＋</button>
+    <button id="btn-reload" class="tool" title="最新に更新">⟳</button>
+    <button id="btn-settings" class="tool" title="設定">⚙</button>
+  </div>
+
+  <!-- サイドバー -->
+  <aside id="sidebar" class="sidebar">
+    <header class="sb-head">
+      <h2 id="sb-title"></h2>
+      <button id="sb-close" class="sb-close" aria-label="閉じる">×</button>
+    </header>
+    <div id="sb-body" class="sb-body"></div>
+  </aside>
+
+  <!-- 設定（PAT） -->
+  <div id="settings" class="modal">
+    <div class="modal-card">
+      <header class="modal-head">
+        <h3>設定</h3>
+        <button id="settings-close" class="sb-close">×</button>
+      </header>
+      <p class="hint">書き込みは GitHub Contents API を直叩きします。
+        このリポジトリ限定・Contents(Read/Write) のみの Fine-grained PAT を貼ってください。
+        端末内(localStorage)にのみ保存され、コードには含まれません。</p>
+      <input id="pat-input" class="sb-input" type="password" placeholder="github_pat_...">
+      <div class="btn-grid">
+        <button id="pat-save" class="op">保存</button>
+        <button id="pat-clear" class="op ghost">消去</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 新しい種 -->
+  <div id="add-modal" class="modal">
+    <div class="modal-card">
+      <header class="modal-head">
+        <h3>新しい種を植える</h3>
+        <button id="add-cancel" class="sb-close">×</button>
+      </header>
+      <input id="add-name" class="sb-input big" type="text" placeholder="プロジェクト名">
+      <div class="radio-row">
+        <label><input type="radio" name="ptype" value="tree" checked> 大きめ（木）</label>
+        <label><input type="radio" name="ptype" value="herb"> 小さめ（草）</label>
+      </div>
+      <div class="btn-grid">
+        <button id="add-confirm" class="op">植える</button>
+        <button id="add-cancel-2" class="op ghost" onclick="document.getElementById('add-modal').classList.remove('open')">やめる</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/bugs.js"></script>
+  <script src="js/assets.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/garden.js"></script>
+  <script src="js/sidebar.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
