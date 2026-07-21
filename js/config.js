@@ -5,8 +5,8 @@ window.PG = window.PG || {};
 
 PG.config = {
   // ==== GitHub リポジトリ（自分のものに書き換える）====
-  owner: "YOUR_GITHUB_USER",
-  repo: "problem-garden",
+  owner: "miyagoshigotono-lgtm",
+  repo: "problem-garden2",
   branch: "main",
   dataPath: "data/garden.json",
 
